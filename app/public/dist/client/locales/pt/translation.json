@@ -2749,7 +2749,10 @@
 		"REGIROCK": "Regirock concede a todos os jogadores 15 pontos de HP adicionais",
 		"MUNCHLAX": "Munchlax trouxe um PICNIC_SET para todo mundo",
 		"SABLEYE": "Sableye pode vir e tentar roubar um dos seus itens não equipados",
-		"CELEBI": "Celebi prevê que a próxima luta PvE será shiny"
+		"CELEBI": "Celebi prevê que a próxima luta PvE será shiny",
+		"CINCCINO": "Cinccino oferece um elegante SILK_SCARF",
+		"MAGNEZONE": "Magnezone está procurando por um fora da lei e oferece uma recompensa para acha-lo",
+		"KINGAMBIT": "Kingambit ofereceu LEADERS_CREST ao jogador no primeiro lugar. Derrote-o em batalha e ganha OURO extra!"
 	},
 	"loading_hints": {
 		"tab_out": "Não saia da tela! O carregamento é pausado quando esta janela do navegador está inativa.",
@@ -2783,7 +2786,10 @@
 		"round_damage_calculation": "Calculo de dano do Round",
 		"round_damage_calculation_description": "O dano que um jogador recebe após perder um round é calculado da seguinte forma: Dano do Round = (Nivel do estagio  / 2) + (Numero de oponentes vivos) : arredondado para cima, clones/nascimentos não contam",
 		"pool_size_per_category": "Tamanho do conjunto por categoria",
-		"pool_size_per_category_description": "Os Pokémon que são encontrados na loja são de um conjunto compartilhado com todos os jogadores da partida. O numero de cada espécie Pokémon no conjunto depende da raridade e do numero dos estágios de evolução."
+		"pool_size_per_category_description": "Os Pokémon que são encontrados na loja são de um conjunto compartilhado com todos os jogadores da partida. O numero de cada espécie Pokémon no conjunto depende da raridade e do numero dos estágios de evolução.",
+		"luck_title": "Como Sorte funciona?",
+		"luck_description": "Sorte aumenta sua chance em todas jogadas, seja de ataques críticos, esquivas, status ao ataque ou qualquer outro efeito mencionado com o símbolo [LK].",
+		"luck_formula": "Sorte afeta probabilidades baseado na fórmula: P = Pbase ^ (1-sorte/100); por exemplo, um Pokémon com 10% chance crítica e 50 de sorte tem na verdade 0.1 ^ (1-50/100) = ~31,62% chance crítica"
 	},
 	"errors": {
 		"USER_INACTIVE": "Você foi expulso por inatividade a fim de economizar recursos do servidor",
@@ -2795,11 +2801,15 @@
 		"USER_NOT_WHITELISTED": "Este jogo está limitado a uma lista determinada de jogadores",
 		"USER_TIMEOUT": "Você recentemente deixou um jogo antes do fim, então é necessário aguardar 5 minutos antes de entrar em um novo jogo.",
 		"USER_IN_ANOTHER_GAME": "Você já esta jogando outro partida, volte a página inicial e reconecte",
+		"USER_ALREADY_JOINED": "Você já está nesta sala",
 		"ROOM_FULL": "Sala cheia",
 		"ROOM_EMPTY": "Esta sala foi removida devido a falta de jogadores",
 		"ROOM_DELETED": "Esta sala foi excluída",
+		"GAME_ALREADY_STARTED": "Esse jogo já começou",
 		"INVALID_PASSWORD": "Senha errada!",
-		"UNKNOWN_ERROR": "Ocorreu um erro inesperado: {{error}}"
+		"UNKNOWN_ERROR": "Ocorreu um erro inesperado: {{error}}",
+		"SERVER_SHUTDOWN": "Servidor desligado para manutenção",
+		"FAILED_TO_RECONNECT": "Falha ao reconectar ao jogo. Por favor recarregue a página e tente novamente."
 	},
 	"connection_status": {
 		"CONNECTION_LOST": "Conexão perdida. Tentando reconectar...",
@@ -2816,11 +2826,24 @@
 		"normal": "Normal",
 		"hard": "Ultra"
 	},
+	"synergy_wheel": {
+		"spin": "Girar",
+		"spinning": "Girando",
+		"results": "Resultados"
+	},
 	"technical_terms": {
-		"STRONGEST": "Mais forte"
+		"STRONGEST": "Mais forte",
+		"ADJACENT": "adjacente",
+		"ADJACENT_IN_THE_SAME_ROW": "adjacente na mesma linha",
+		"CONE": "cone",
+		"BOARD_EFFECT": "Efeito de Tabuleiro"
 	},
 	"technical_terms_definitions": {
-		"STRONGEST": "O mais forte é definido como, por ordem de prioridade: 1. Número de itens segurados, 2. Nível da unidade, 3. Raridade da unidade."
+		"STRONGEST": "O mais forte é definido como, por ordem de prioridade: 1. Número de itens segurados, 2. Nível da unidade, 3. Raridade da unidade.",
+		"ADJACENT": "As 8 células que circundam a unidade",
+		"ADJACENT_IN_THE_SAME_ROW": "As células imediatamente a esquerda e direita de uma unidade",
+		"CONE": "Atirando a um ângulo de 90 graus a frente da unidade, centrado no alvo",
+		"BOARD_EFFECT": "Um Efeito de Tabuleiro é um efeito em uma célula do tabuleiro que influencia todas as unidades encima dela, não importa a equipe, até o final da partida. Efeitos de Tabuleiro podem ser apagados por certas habilidades."
 	},
 	"victory_road": {
 		"title": "Victory Road",
@@ -2841,6 +2864,8 @@
 		"battle": "Batalha de jogadores"
 	},
 	"enemy_team": "Equipe inimiga",
+	"pokemon": "Pokémon",
+	"marowak_items": "Itens (Encontro do Marowak)",
 	"stat_boosts": "Bônus de atributos",
 	"rewards": "Recompensas",
 	"shiny_chance": "Chance de shiny",
@@ -2854,11 +2879,62 @@
 	"portal_description_3": "Se você decidir não pegar nenhum portal, permanecerá em sua região atual, e os Pokémon propostos serão totalmente aleatórios.",
 	"additional_description": "Escolha uma escolha adicional e um componente de item entre 3 propostas. Escolhas adicionais são Pokémon de evolução de 2 estágios que podem ser encontrados em todas as lojas dos jogadores após serem escolhidos.",
 	"battle_description": "Estágio de batalha regular onde você luta contra outros jogadores ou bots.",
+	"rounds_since_last_fight": "Rodadas desde a última luta",
+	"minimize": "Minimizar",
+	"maximize": "Maximizar",
+	"battle_stats": "Status de Batalha",
+	"tier_list": {
+		"title": "Minha nova tier list",
+		"add_row": "Adicionar Linha",
+		"download_image": "Baixar Imagem",
+		"share_on_discord": "Compartilhar no Discord",
+		"move_row_up": "Mover linha para cima",
+		"move_row_down": "Mover linha para baixo",
+		"delete_row": "Deletar linha"
+	},
 	"game_modes": {
 		"CLASSIC": "Clássico",
 		"RANKED": "Jogo Rankeado",
 		"SCRIBBLE": "Garabato do Smeargle",
 		"CUSTOM_LOBBY": "Jogo personalizado",
 		"TOURNAMENT": "Torneio"
+	},
+	"game_modes_descriptions": {
+		"RANKED": "Para competidores! 8 jogadores, valendo Elo\nRestrito a jogadores de classificação semelhante a sua",
+		"SCRIBBLE": "Para se divertir! 8 jogadores, Elo desabilitado\nUma nova regra especial é adicionada ao jogo",
+		"CUSTOM_LOBBY": "Crie uma sala privada para jogar com seus amigos ou com a máquina",
+		"TOURNAMENT": "Essa partida é parte de um evento. Confira eventos futuros no Discord"
+	},
+	"dendrogram": {
+		"title": "Hierarquia de Aglomerados",
+		"description": "Esse dendograma mostra como equipes se aglomeram baseado na similaridade das sinergias. Derivações que se fundem nas alturas mais baixas são mais similares",
+		"loading": "Carregando dendograma...",
+		"no_data": "Sem dados de dendograma disponíveis. Grupos hierárquicos podem ainda não terem sido carregados ",
+		"total_clusters": "Total de Aglomerados",
+		"total_matches": "Total de Combinações",
+		"linkage_method": "Método de Ligação",
+		"branches": "Derivações",
+		"branch": "Derivação",
+		"branch_total_matches": "Total de Combinações",
+		"branch_contains_clusters": "Aglomerações Contidas",
+		"cluster": "Aglomeração",
+		"hovered_cluster": "Exibido",
+		"selected_cluster": "Selecionada",
+		"cluster_size": "Tamanho",
+		"matches": "Combinações"
+	},
+	"cluster_map": {
+		"title": "Mapa de Aglomeração",
+		"description": "Esse mapa mostra composições de equipe baseado na similaridade das sinergias. Cada ponto representa uma aglomeração de construção de equipes similares",
+		"loading": "Carregando mapa de aglomerações...",
+		"total_clusters": "Total de Aglomerações",
+		"total_matches": "Total de Combinações",
+		"cluster": "Aglomeração",
+		"hovered_cluster": "Exibido",
+		"selected_cluster": "Selecionado",
+		"rank": "Classificação",
+		"winrate": "Taxa de Vitórias",
+		"popularity": "Popularidade",
+		"count": "Contagem"
 	}
 }
